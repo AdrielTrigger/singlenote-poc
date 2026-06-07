@@ -9,12 +9,17 @@
             http-equiv="X-Content-Security-Policy"
             content="default-src 'self'; script-src 'self'"
         />
-        <title>Hello from Electron renderer!</title>
+        <title>Single note editor</title>
     </head>
     <body>
-        <h1>Hello from Electron renderer!</h1>
-        <p>👋</p>
-        <p id="info"></p>
+        <h1>Single note editor</h1>
+        <form id="save-note-form">
+            <input type="text" id="note-box" placeholder="Write your note here...">
+            <button type="submit">SAVE NOTE</button>
+        </form>
+        <p id="note-text"></p>
+        <button id="edit-note-button">EDIT NOTE</button>
+        <button id="delete-note-button">DELETE NOTE</button>
     </body>
-    <script src="./renderer.js"></script>
+    <script src="note-logic.js"></script>
 </html>
